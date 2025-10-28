@@ -1,0 +1,9 @@
+/* نمط الطباعة لتنسيق التقرير عند التصدير إلى PDF */
+@media print {
+  body { font-family: "Tahoma", Arial, sans-serif; color: #000; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.9em; }
+  header, nav, .no-print { display: none !important; }
+  .print-header { display: block; margin-bottom: 12px; }
+  .section { page-break-inside: avoid; margin-bottom: 14px; }
+}
+

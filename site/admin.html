@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>لوحة التحكم | منصة الخدمات الرقمية</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>لوحة التحكم</h1>
+    <nav>
+      <a href="/site/index.html">الرئيسية</a>
+      <a href="/feasibility_study_ar.html#letters-section">نماذج المخاطبات</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="admin-section">
+      <h2>إدارة المشاريع</h2>
+      <form id="projectForm" class="admin-form">
+        <label>اسم المشروع
+          <input type="text" id="projectName" required />
+        </label>
+        <label>الوصف
+          <input type="text" id="projectDesc" />
+        </label>
+        <label>الحالة
+          <select id="projectStatus">
+            <option value="جديد">جديد</option>
+            <option value="قيد التنفيذ">قيد التنفيذ</option>
+            <option value="مكتمل">مكتمل</option>
+          </select>
+        </label>
+        <button type="submit">إضافة</button>
+      </form>
+
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>اسم المشروع</th>
+            <th>الوصف</th>
+            <th>الحالة</th>
+            <th>إجراءات</th>
+          </tr>
+        </thead>
+        <tbody id="projectsBody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>إدارة بيانات محلية عبر المتصفح (localStorage). جاهز للربط بقاعدة بيانات خارجية لاحقًا.</small>
+  </footer>
+
+  <script src="admin.js"></script>
+</body>
+</html>
+

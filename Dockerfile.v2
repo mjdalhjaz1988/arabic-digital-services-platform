@@ -1,0 +1,22 @@
+FROM node:18-alpine
+
+# Set working directory
+WORKDIR /app
+
+# Copy project files
+COPY . .
+
+# Install static server
+RUN npm install -g serve
+
+# Install curl for container health checks
+RUN apk add --no-cache curl
+
+# Expose application port
+EXPOSE 8000
+
+# Healthcheck: verifies the HTTP service responds
+HEALTHCHECK --interval=30s --timeout=5s --start-period=15s CMD curl -f http://localhost:8000/ || exit 1
+
+# Start static site on port 8000
+CMD ["serve", "-s", ".", "-l", "8000"]

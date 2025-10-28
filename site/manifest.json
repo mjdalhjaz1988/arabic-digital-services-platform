@@ -1,0 +1,10 @@
+{
+  "name": "منصة الخدمات الرقمية",
+  "short_name": "الخدمات",
+  "start_url": "/site/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0f172a",
+  "icons": []
+}
+
