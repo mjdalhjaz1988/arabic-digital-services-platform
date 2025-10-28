@@ -1,0 +1,17 @@
+/* أنماط عامة للموقع ولوحة التحكم */
+:root { --bg: #ffffff; --text: #0f172a; --muted: #475569; --border: #e5e7eb; --primary: #2563eb; }
+html, body { margin:0; padding:0; background: var(--bg); color: var(--text); font-family: 'Segoe UI', Tahoma, Arial; }
+.site-header { display:flex; justify-content:space-between; align-items:center; padding:12px 16px; border-bottom:1px solid var(--border); }
+.site-header nav a { margin-inline-start: 10px; text-decoration:none; color: var(--muted); }
+.hero { padding: 24px 16px; border-bottom:1px solid var(--border); }
+.cta { margin-top: 12px; }
+.btn { display:inline-block; padding:8px 12px; background:var(--primary); color:#fff; border-radius:6px; text-decoration:none; margin-inline-end:8px; }
+.btn.secondary { background:#0f172a; }
+.services, .getting-started { padding: 16px; }
+.admin-section { padding: 16px; }
+.admin-form { display:grid; grid-template-columns: repeat(3, minmax(160px, 1fr)); gap: 12px; margin-bottom: 16px; }
+.admin-form input, .admin-form select { width:100%; padding:8px; border:1px solid var(--border); border-radius:6px; }
+.admin-table { width:100%; border-collapse:collapse; }
+.admin-table th, .admin-table td { border:1px solid var(--border); padding:8px; }
+.site-footer { padding: 16px; border-top:1px solid var(--border); color: var(--muted); }
+
