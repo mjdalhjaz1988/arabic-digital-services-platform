@@ -5,9 +5,10 @@
   /**
    * يسجل Service Worker إن كان المتصفح يدعم ذلك.
    */
+  // Function-level comment: يسجّل Service Worker من المسار النسبي ليتوافق مع GitHub Pages ومسارات الفرع.
   function registerSW() {
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/site/sw.js').catch(function(err){
+      navigator.serviceWorker.register('./sw.js').catch(function(err){
         console.warn('فشل تسجيل Service Worker:', err);
       });
     }
@@ -35,4 +36,3 @@
     handleInstallPrompt();
   });
 })();
-
